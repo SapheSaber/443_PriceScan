@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 67-443: SwiftUI & JSON Parsing Class Exercise
 ---
 For this class exercise, we are going to use SwiftUI to build the scan history aspect of the PriceCheck app that we've discussed on several occasions this semester.  
@@ -31,3 +32,7 @@ If you complete that quickly, work on adding in the tabbed menu options (working
 
 
 Additional instructions about the next checkpoints will be given in class.  This assignment is to be done by every person, but we are going to put you in pairs during class so you have someone to talk out ideas with and instructors will come around to check on you and to assist.
+=======
+# 443_PriceScan
+ 
+>>>>>>> main
