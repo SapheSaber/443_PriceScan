@@ -7,27 +7,26 @@
 import SwiftUI
 
 struct ScanListView: View {
-    
+  var scan: PriceScan
+
   var body: some View {
-    
-    let locationScans = Bundle.main.decode([Location].self, from: "scan_api_data.json").sorted(by: { $0 < $1 })
-  
-    NavigationView {
-      List {
-        ForEach(locationScans) { location in
-          Section(header: Text(location.name), content: {
-            ForEach(location.scans.sorted(by: { $0 < $1 })) { scan in
-              Text(scan.item)
-            }
-          })
-        }
-      }.navigationBarTitle("Scans")
+    NavigationLink(destination: ScanDetailView(scan: scan)){
+      HStack{
+        Text(scan.item).font(.body)
+        
+        Spacer()
+        // Display price in bold
+        Text(String(format: "$%.2f", scan.price))
+            .fontWeight(.bold)
+        
+      }
     }
-  }
+
+   }
 }
 
-struct ScanListView_Previews: PreviewProvider {
-    static var previews: some View {
-        ScanListView()
-    }
-}
+//struct ScanListView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ScanListView()
+//    }
+//}
